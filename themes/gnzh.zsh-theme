@@ -38,7 +38,7 @@ elif which rvm-prompt &> /dev/null; then # detect system-wide rvm installation
 elif which rbenv &> /dev/null; then # detect Simple Ruby Version Management
   rvm_ruby='%F{red}‹$(rbenv version | sed -e "s/ (set.*$//")›%f'
 fi
-local git_branch='$(git_prompt_info)'
+local git_branch="${git_prompt_info}"
 
 PROMPT="╭─${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
 ╰─$PR_PROMPT "
